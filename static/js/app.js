@@ -38,7 +38,3 @@ function handleClick(){
     buildTable(filterData);
 }
 
-
-
-d3.selectAll("#filter-btn").on("click", handleClick);
-buildTable(tableData);
