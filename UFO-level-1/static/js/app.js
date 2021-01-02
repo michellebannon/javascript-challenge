@@ -38,3 +38,6 @@ function handleClick(){
     buildTable(filterData);
 }
 
+//select all the elements that match
+d3.selectAll("#filter-btn").on("click", handleClick);
+buildTable(tableData);
