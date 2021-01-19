@@ -22,18 +22,18 @@ function buildTable(data){
 
 // Event that calls a function name is handleClick and use d3 to prevent form for refreshing
 function handleClick(){
-    d3.event.preventDefault() // prevent the form from refreshing the page
-    
+     d3.event.preventDefault() // prevent the form from refreshing the page per tutor
+   
+    // get date and time of the filter
     let date = d3.select("#datetime").property("value");
     let filterData = tableData;
-
-    if (date){
 // Filter data to select by using identity operator to verify both dates are the same
+    if (date){
+
         filterData = filterData.filter((row) => row.datetime === date);
     }
 
 // build the table based on the dates selected 
-// THIS PART DOESN'T WORK not sure why
     buildTable(filterData);
 }
 
